@@ -1,0 +1,278 @@
+{
+  "_comment": "NEONDECK service catalog. 'package' is set only for IDs verified in the winget community repository. Everything else is looked up live with 'winget search' on the user's PC.",
+  "services": [
+    {
+      "id": "pluto-tv",
+      "name": "Pluto TV",
+      "category": "free",
+      "url": "https://pluto.tv"
+    },
+    {
+      "id": "tubi",
+      "name": "Tubi",
+      "category": "free",
+      "url": "https://tubitv.com"
+    },
+    {
+      "id": "the-roku-channel",
+      "name": "The Roku Channel",
+      "category": "free",
+      "url": "https://therokuchannel.roku.com"
+    },
+    {
+      "id": "plex",
+      "name": "Plex",
+      "category": "free",
+      "url": "https://app.plex.tv",
+      "package": {
+        "source": "winget",
+        "id": "Plex.Plex"
+      }
+    },
+    {
+      "id": "xumo-play",
+      "name": "Xumo Play",
+      "category": "free",
+      "url": "https://play.xumo.com"
+    },
+    {
+      "id": "sling-freestream",
+      "name": "Sling Freestream",
+      "category": "free",
+      "url": "https://watch.sling.com/dashboard/freestream"
+    },
+    {
+      "id": "crackle",
+      "name": "Crackle",
+      "category": "free",
+      "url": "https://www.crackle.com"
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "category": "free",
+      "url": "https://www.youtube.com/tv"
+    },
+    {
+      "id": "twitch",
+      "name": "Twitch",
+      "category": "free",
+      "url": "https://www.twitch.tv"
+    },
+    {
+      "id": "pbs",
+      "name": "PBS",
+      "category": "free",
+      "url": "https://www.pbs.org"
+    },
+    {
+      "id": "pbs-kids",
+      "name": "PBS Kids",
+      "category": "free",
+      "url": "https://pbskids.org/videos"
+    },
+    {
+      "id": "kanopy",
+      "name": "Kanopy",
+      "category": "free",
+      "url": "https://www.kanopy.com"
+    },
+    {
+      "id": "hoopla",
+      "name": "Hoopla",
+      "category": "free",
+      "url": "https://www.hoopladigital.com"
+    },
+    {
+      "id": "internet-archive",
+      "name": "Internet Archive",
+      "category": "free",
+      "url": "https://archive.org/details/movies"
+    },
+    {
+      "id": "netflix",
+      "name": "Netflix",
+      "category": "subscription",
+      "url": "https://www.netflix.com"
+    },
+    {
+      "id": "disney-plus",
+      "name": "Disney+",
+      "category": "subscription",
+      "url": "https://www.disneyplus.com"
+    },
+    {
+      "id": "hulu",
+      "name": "Hulu",
+      "category": "subscription",
+      "url": "https://www.hulu.com"
+    },
+    {
+      "id": "hbo-max",
+      "name": "HBO Max",
+      "category": "subscription",
+      "url": "https://www.hbomax.com"
+    },
+    {
+      "id": "prime-video",
+      "name": "Prime Video",
+      "category": "subscription",
+      "url": "https://www.primevideo.com"
+    },
+    {
+      "id": "apple-tv",
+      "name": "Apple TV",
+      "category": "subscription",
+      "url": "https://tv.apple.com"
+    },
+    {
+      "id": "peacock",
+      "name": "Peacock",
+      "category": "subscription",
+      "url": "https://www.peacocktv.com"
+    },
+    {
+      "id": "paramount-plus",
+      "name": "Paramount+",
+      "category": "subscription",
+      "url": "https://www.paramountplus.com"
+    },
+    {
+      "id": "discovery-plus",
+      "name": "Discovery+",
+      "category": "subscription",
+      "url": "https://www.discoveryplus.com"
+    },
+    {
+      "id": "amc-plus",
+      "name": "AMC+",
+      "category": "subscription",
+      "url": "https://www.amcplus.com"
+    },
+    {
+      "id": "starz",
+      "name": "Starz",
+      "category": "subscription",
+      "url": "https://www.starz.com"
+    },
+    {
+      "id": "mgm-plus",
+      "name": "MGM+",
+      "category": "subscription",
+      "url": "https://www.mgmplus.com"
+    },
+    {
+      "id": "crunchyroll",
+      "name": "Crunchyroll",
+      "category": "subscription",
+      "url": "https://www.crunchyroll.com"
+    },
+    {
+      "id": "criterion-channel",
+      "name": "Criterion Channel",
+      "category": "subscription",
+      "url": "https://www.criterionchannel.com"
+    },
+    {
+      "id": "shudder",
+      "name": "Shudder",
+      "category": "subscription",
+      "url": "https://www.shudder.com"
+    },
+    {
+      "id": "britbox",
+      "name": "BritBox",
+      "category": "subscription",
+      "url": "https://www.britbox.com"
+    },
+    {
+      "id": "youtube-tv",
+      "name": "YouTube TV",
+      "category": "livetv",
+      "url": "https://tv.youtube.com"
+    },
+    {
+      "id": "sling",
+      "name": "Sling",
+      "category": "livetv",
+      "url": "https://watch.sling.com"
+    },
+    {
+      "id": "fubo",
+      "name": "Fubo",
+      "category": "livetv",
+      "url": "https://www.fubo.tv"
+    },
+    {
+      "id": "directv-stream",
+      "name": "DirecTV Stream",
+      "category": "livetv",
+      "url": "https://stream.directv.com"
+    },
+    {
+      "id": "espn",
+      "name": "ESPN",
+      "category": "sports",
+      "url": "https://www.espn.com/watch"
+    },
+    {
+      "id": "nfl-plus",
+      "name": "NFL+",
+      "category": "sports",
+      "url": "https://www.nfl.com/plus"
+    },
+    {
+      "id": "nba-league-pass",
+      "name": "NBA League Pass",
+      "category": "sports",
+      "url": "https://www.nba.com/watch"
+    },
+    {
+      "id": "mlb-tv",
+      "name": "MLB.TV",
+      "category": "sports",
+      "url": "https://www.mlb.com/tv"
+    },
+    {
+      "id": "dazn",
+      "name": "DAZN",
+      "category": "sports",
+      "url": "https://www.dazn.com"
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "category": "music",
+      "url": "https://open.spotify.com",
+      "package": {
+        "source": "winget",
+        "id": "Spotify.Spotify"
+      }
+    },
+    {
+      "id": "youtube-music",
+      "name": "YouTube Music",
+      "category": "music",
+      "url": "https://music.youtube.com"
+    },
+    {
+      "id": "apple-music",
+      "name": "Apple Music",
+      "category": "music",
+      "url": "https://music.apple.com"
+    },
+    {
+      "id": "tidal",
+      "name": "Tidal",
+      "category": "music",
+      "url": "https://listen.tidal.com",
+      "package": {
+        "source": "winget",
+        "id": "TIDALMusicAS.TIDAL"
+      },
+      "appNames": [
+        "TIDAL"
+      ]
+    }
+  ]
+}

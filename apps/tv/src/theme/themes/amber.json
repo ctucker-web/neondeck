@@ -1,0 +1,21 @@
+{
+  "id": "amber",
+  "name": "Amber Terminal",
+  "tokens": {
+    "bg": "#080604",
+    "panel": "#14100a",
+    "panel-raised": "#1e1810",
+    "line": "#3a2e1a",
+    "text": "#f3e6cf",
+    "text-dim": "#a08c6c",
+    "accent": "#ffb000",
+    "accent-2": "#ff5a1f",
+    "highlight": "#7dff9b",
+    "danger": "#ff4d5e",
+    "grid": "rgba(255, 176, 0, 0.05)",
+    "font-display": "'Orbitron', sans-serif",
+    "font-body": "'Inter', system-ui, sans-serif",
+    "font-mono": "'JetBrains Mono', monospace",
+    "corner": "1rem"
+  }
+}

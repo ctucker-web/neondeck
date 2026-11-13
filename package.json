@@ -1,0 +1,17 @@
+{
+  "name": "neondeck",
+  "private": true,
+  "version": "0.2.0",
+  "license": "UNLICENSED",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @neondeck/tv",
+    "build": "npm run build -w @neondeck/tv",
+    "test": "npm run test -w @neondeck/core && npm run test -w @neondeck/tv",
+    "desktop": "npm run start -w @neondeck/desktop",
+    "dist:win": "npm run build && npm run dist:win -w @neondeck/desktop"
+  }
+}

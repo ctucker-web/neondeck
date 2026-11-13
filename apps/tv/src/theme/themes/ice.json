@@ -1,0 +1,21 @@
+{
+  "id": "ice",
+  "name": "Ice (soft corners)",
+  "tokens": {
+    "bg": "#070a10",
+    "panel": "#0e1420",
+    "panel-raised": "#16203a",
+    "line": "#243352",
+    "text": "#eaf1ff",
+    "text-dim": "#8a9ab8",
+    "accent": "#6aa8ff",
+    "accent-2": "#b48cff",
+    "highlight": "#ffffff",
+    "danger": "#ff6b7a",
+    "grid": "rgba(106, 168, 255, 0.04)",
+    "font-display": "'Inter', system-ui, sans-serif",
+    "font-body": "'Inter', system-ui, sans-serif",
+    "font-mono": "'JetBrains Mono', monospace",
+    "corner": "0.35rem"
+  }
+}
