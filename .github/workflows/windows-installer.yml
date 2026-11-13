@@ -1,0 +1,44 @@
+# Builds the Windows installer on a real Windows runner and publishes it as a
+# GitHub release named after the version in package.json.
+name: Windows installer
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm test
+
+      - run: npm run dist:win
+
+      - name: Read version
+        id: version
+        shell: bash
+        run: echo "version=$(node -p "require('./apps/desktop/package.json').version")" >> "$GITHUB_OUTPUT"
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.version.outputs.version }}
+          name: NEONDECK ${{ steps.version.outputs.version }} (Windows preview)
+          body: |
+            Unsigned preview build for Windows 11. SmartScreen will warn: choose "More info", then "Run anyway".
+            See the README for what has and has not been tested.
+          files: apps/desktop/release/*.exe
+          fail_on_unmatched_files: true
