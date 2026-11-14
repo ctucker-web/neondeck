@@ -13,5 +13,8 @@
     "test": "npm run test -w @neondeck/core && npm run test -w @neondeck/tv",
     "desktop": "npm run start -w @neondeck/desktop",
     "dist:win": "npm run build && npm run dist:win -w @neondeck/desktop"
+  },
+  "devDependencies": {
+    "playwright": "^1.65.1"
   }
 }

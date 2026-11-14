@@ -27,6 +27,36 @@ jobs:
 
       - run: npm run dist:win
 
+      # Real-Windows checks. Results go to the ci-logs branch for review; they
+      # never block the installer from being published.
+      - name: Windows integration checks
+        continue-on-error: true
+        timeout-minutes: 20
+        run: |
+          npx esbuild apps/desktop/src/platform/windows.ts --bundle --platform=node --format=cjs --outfile=ci-build/windows.cjs --log-level=warning
+          node scripts/win-integration.cjs ci-results ci-build/windows.cjs
+
+      - name: End-to-end check of the packaged app
+        continue-on-error: true
+        timeout-minutes: 10
+        run: node scripts/win-e2e.cjs ci-results
+
+      - name: Save check results to the ci-logs branch
+        if: always()
+        continue-on-error: true
+        shell: bash
+        run: |
+          mkdir -p ci-results && echo "$GITHUB_SHA" > ci-results/commit.txt
+          tmp="$RUNNER_TEMP/ci-results" && rm -rf "$tmp" && cp -r ci-results "$tmp"
+          git config user.name "neondeck-ci" && git config user.email "ci@users.noreply.github.com"
+          git switch --orphan ci-logs
+          git rm -rf --cached . > /dev/null 2>&1 || true
+          git clean -fdx > /dev/null 2>&1 || true
+          cp -r "$tmp"/. .
+          git add -A && git commit -q -m "CI results for $GITHUB_SHA"
+          git push -f origin ci-logs
+          git switch -f main
+
       - name: Read version
         id: version
         shell: bash

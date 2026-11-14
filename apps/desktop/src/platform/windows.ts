@@ -15,22 +15,26 @@ import {
 interface RunResult {
   code: number;
   out: string;
+  err: string;
 }
 
-function run(file: string, args: string[], timeoutMs = 15 * 60_000): Promise<RunResult> {
+export function run(file: string, args: string[], timeoutMs = 15 * 60_000): Promise<RunResult> {
   return new Promise((resolve, reject) => {
     const child = spawn(file, args, { windowsHide: true, shell: false });
     let out = '';
+    let err = '';
     child.stdout.setEncoding('utf8').on('data', (d) => (out += d));
-    child.stderr.setEncoding('utf8').on('data', (d) => (out += d));
+    // Kept separate: PowerShell writes progress records to stderr, and mixing
+    // them into stdout corrupts the JSON we parse.
+    child.stderr.setEncoding('utf8').on('data', (d) => (err += d));
     const timer = setTimeout(() => child.kill(), timeoutMs);
     child.on('error', (e) => { clearTimeout(timer); reject(e); });
-    child.on('close', (code) => { clearTimeout(timer); resolve({ code: code ?? -1, out }); });
+    child.on('close', (code) => { clearTimeout(timer); resolve({ code: code ?? -1, out, err }); });
   });
 }
 
-function powershell(script: string, timeoutMs?: number): Promise<RunResult> {
-  const full = `[Console]::OutputEncoding=[Text.Encoding]::UTF8; $ErrorActionPreference='Stop'; ${script}`;
+export function powershell(script: string, timeoutMs?: number): Promise<RunResult> {
+  const full = `$ProgressPreference='SilentlyContinue'; [Console]::OutputEncoding=[Text.Encoding]::UTF8; $ErrorActionPreference='Stop'; ${script}`;
   const encoded = Buffer.from(full, 'utf16le').toString('base64');
   return run('powershell.exe', ['-NoProfile', '-NonInteractive', '-ExecutionPolicy', 'Bypass', '-EncodedCommand', encoded], timeoutMs);
 }
@@ -50,7 +54,8 @@ function lastLines(out: string, n = 3): string {
 }
 
 export async function startApps(): Promise<StartApp[]> {
-  const { out } = await powershell('Get-StartApps | Select-Object Name,AppID | ConvertTo-Json -Compress', 60_000);
+  const { code, out, err } = await powershell('Get-StartApps | Select-Object Name,AppID | ConvertTo-Json -Compress', 60_000);
+  if (code !== 0 && !out.trim()) throw new Error(`Could not read the Start menu: ${lastLines(err || 'PowerShell failed')}`);
   return parseStartApps(out);
 }
 
@@ -77,7 +82,7 @@ export async function install(pkg: PackageRef): Promise<void> {
   const { code, out } = await winget([
     'install', '--id', pkg.id, '--exact', '--source', pkg.source, '--silent', '--accept-package-agreements',
   ]);
-  if (code !== 0) throw new Error(`Install failed: ${lastLines(out)}`);
+  if (code !== 0) throw new Error(`Install failed: ${lastLines(out + err)}`);
 }
 
 /** Uninstall and upgrade accept only ids that winget itself reports as installed. */
