@@ -1,0 +1,9 @@
+2026-11-14T00:40:45.434Z --- NEONDECK 0.3.0 started on win32 10.0.26100 ---
+2026-11-14T00:40:46.657Z ok   startApps() 528ms
+2026-11-14T00:42:14.756Z ok   launchUrl(https://www.youtube.com/…) 13937ms
+2026-11-14T00:42:23.966Z ok   wingetList() 1002ms
+2026-11-14T00:42:30.046Z ok   wingetSearch(vlc) 526ms
+2026-11-14T00:42:38.899Z ok   setAutostart(true) 0ms
+2026-11-14T00:42:38.900Z ok   getAutostart() 0ms
+2026-11-14T00:42:38.901Z ok   setAutostart(false) 0ms
+2026-11-14T00:42:38.901Z ok   getAutostart() 0ms

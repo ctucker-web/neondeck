@@ -1,0 +1,70 @@
+   -                                                                                                                            -                                                                                                                         Name                                     Id                                       Version         Available      Source
+-----------------------------------------------------------------------------------------------------------------------
+7-Zip 26.05 (x64)                        7zip.7zip                                26.05           26.06          winget
+Git                                      Git.Git                                  2.56.0.4                       winget
+ImageMagick 7.1.2-25 Q16-HDRI (64-bit) … ImageMagick.ImageMagick                  7.1.2.25        7.1.2.34       winget
+Miniconda3 py314_26.9.4-0 (Python 3.14.… Anaconda.Miniconda3                      py314_26.9.4-0  py314_26.9.4-1 winget
+Mozilla Firefox (x64 en-US)              ARP\Machine\X64\Mozilla Firefox          159.0.1                        
+Mozilla Maintenance Service              ARP\Machine\X64\MozillaMaintenanceServi… 159.0.1                        
+OpenSSL 3.6.5 (64-bit)                   ShiningLight.OpenSSL.Dev                 3.6.5           4.1.0          winget
+PostgreSQL 17                            PostgreSQL.PostgreSQL.17                 17.11-5         17.12-1        winget
+R for Windows 4.6.2                      RProject.R                               4.6.2                          winget
+Rtools 4.5 (6768-6492)                   RProject.Rtools                          4.5.6768                       winget
+Unity Hub 3.22.5                         Unity.UnityHub                           3.22.5.65535    3.22.6.65535   winget
+Microsoft ODBC Driver 17 for SQL Server  Microsoft.msodbcsql.17                   17.10.6.1       17.11.1.1      winget
+Strawberry Perl (64-bit)                 StrawberryPerl.StrawberryPerl            5.42.1          5.42.3.1       winget
+AWS SAM Command Line Interface           Amazon.SAM-CLI                           1.171.0         1.172.1        winget
+CMake                                    Kitware.CMake                            4.4.5                          winget
+Microsoft Windows Application Compatibi… ARP\Machine\X64\{22221111-1111-1111-111… Unknown                        
+MySQL Server 8.4                         Oracle.MySQL                             8.4.13                         winget
+MongoDB 7.0.45 2008R2Plus SSL (64 bit)   MongoDB.Server                           7.0.45          9.0.4          winget
+Microsoft Azure CLI (64-bit)             Microsoft.AzureCLI                       2.92.0                         winget
+Microsoft Azure Service Fabric SDK       Microsoft.ServiceFabricSDK               8.7.157.1                      winget
+Microsoft Web Platform Installer 5.1     Microsoft.webpicmd                       5.1.51515.0                    winget
+Google Chrome                            Google.Chrome                            156.0.8078.80   157.0.8103.79  winget
+PowerShell 7-x64                         Microsoft.PowerShell                     7.6.9.0         7.7.0.0        winget
+Microsoft System CLR Types for SQL Serv… Microsoft.CLRTypesSQLServer.2019         15.0.2000.5                    winget
+Microsoft Visual Studio Installer        ARP\Machine\X64\{6F320B93-EE3C-4826-85E… 4.11.24.2075                   
+MongoDB Shell                            MongoDB.Shell                            2.14.1                         winget
+GitHub CLI                               GitHub.cli                               2.103.3         2.104.0        winget
+AWS Command Line Interface v2            Amazon.AWSCLI                            2.39.3.0        2.40.2         winget
+Microsoft System CLR Types for SQL Serv… ARP\Machine\X64\{A5B947FD-875D-448C-AB7… 13.2.5026.0                    
+Microsoft OLE DB Driver 19 for SQL Serv… Microsoft.SQLServer.OLEDBDriver.19       19.4.1.0        19.4.3.0       winget
+IIS 10.0 Express                         ARP\Machine\X64\{C21221FC-C5DD-488F-AA8… 10.0.11304                     
+Azure Cosmos DB Emulator                 Microsoft.Azure.CosmosEmulator           2.14.28                        winget
+Microsoft SQL Server Data-Tier Applicat… Microsoft.SqlPackage.NETFramework        170.4.83.3      170.5.96       winget
+PowerShell Extensions for SQL Server 20… ARP\Machine\X64\{D113B5D0-D291-4FCD-860… 13.2.5026.0                    
+Node.js                                  OpenJS.NodeJS.22                         22.23.4         22.23.5        winget
+Microsoft Web Deploy 4.0                 Microsoft.WebDeploy                      10.0.9419                      winget
+Microsoft SQL Server 2016 Management Ob… ARP\Machine\X64\{E3806E56-5AF2-4467-A6B… 13.2.5026.0                    
+Microsoft SQL Server 2025 LocalDB        ARP\Machine\X64\{E9279A3D-A613-4CA7-8B0… 17.0.4025.3                    
+Microsoft .NET SDK 10.0.403 (x64) from … ARP\Machine\X64\{F88188C9-CDDF-4229-B5A… 40.11.64284                    
+Visual Studio Enterprise 2026            Microsoft.VisualStudio.Enterprise        18.11.3         18.12.0        winget
+Inno Setup version 6.7.1                 JRSoftware.InnoSetup                     6.7.1           6.7.3          winget
+LLVM                                     LLVM.LLVM                                20.1.8          23.1.5         winget
+Microsoft Edge WebView2 Runtime          Microsoft.EdgeWebView2Runtime            156.0.4314.58   157.0.4341.42  winget
+Python Launcher                          Python.Launcher                          3.15.2                         winget
+Windows Application Driver               Microsoft.WindowsApplicationDriver       1.2.1.0                        winget
+Microsoft Visual C++ v14 Redistributabl… Microsoft.VCRedist.2015+.x64             14.51.36247.0   14.52.37029.0  winget
+vs_CoreEditorFonts                       ARP\Machine\X86\{1851460E-0E63-4117-B5B… 17.7.40001                     
+Windows SDK AddOn                        ARP\Machine\X86\{25857977-2CF7-4941-8C7… 10.1.0.0                       
+Microsoft Edge                           Microsoft.Edge                           156.0.4314.58                  winget
+Windows Software Development Kit - Wind… ARP\Machine\X86\{45e335f3-c807-43b8-9ed… 10.1.26100.9457                
+Microsoft SQL Server Integration Servic… Microsoft.DataTools.IntegrationServices  17.0.1016.0                    winget
+WiX Toolset v3.14.1.8722                 WiXToolset.WiXToolset                    3.14.1.8722                    winget
+Microsoft Visual C++ v14 Redistributabl… Microsoft.VCRedist.2015+.x86             14.51.36247.0   14.52.37029.0  winget
+Microsoft Visual Studio Tools for Appli… ARP\Machine\X86\{C0A2B576-1630-4449-93B… 17.1.37110                     
+sbt 1.12.12                              sbt.sbt                                  1.12.12         2.0.12         winget
+Windows Software Development Kit - Wind… Microsoft.WindowsSDK.10.0.26100          10.0.26100.7705                winget
+Session Manager Plugin                   Amazon.SessionManagerPlugin              1.2.896.0                      winget
+Microsoft Visual C++ 2013 Redistributab… Microsoft.VCRedist.2013.x64              12.0.40660.0    12.0.40664.0   winget
+App Installer                            Microsoft.AppInstaller                   1.26.510.0      1.29.380       winget
+Microsoft Edge                           MSIX\Microsoft.MicrosoftEdge.Stable_156… 156.0.4314.58                  
+Windows Security                         MSIX\Microsoft.SecHealthUI_1000.29680.1… 1000.29680.100…                
+Microsoft.UI.Xaml.2.8                    Microsoft.UI.Xaml.2.8                    8.2511.26001.0                 winget
+Microsoft Visual C++ 2015 UWP Desktop R… Microsoft.VCLibs.Desktop.14              14.0.33728.0                   winget
+Microsoft Visual C++ 2015 UWP Runtime P… Microsoft.VCLibs.14                      14.0.33519.0                   winget
+Feedback Hub                             MSIX\Microsoft.WindowsFeedbackHub_1.251… 1.2512.16303.0                 
+Windows Terminal                         Microsoft.WindowsTerminal                1.23.20211.0    1.25.3131.0    winget
+Windows Package Manager Source (winget)… MSIX\Microsoft.Winget.Source_2026.1113.… 2026.1113.2426…                
+Windows Subsystem for Linux              Microsoft.WSL                            3.0.3.0         3.0.5          winget

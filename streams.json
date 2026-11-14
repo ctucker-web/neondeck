@@ -1,0 +1,337 @@
+[
+  {
+    "name": "NASA TV",
+    "probes": [
+      {
+        "url": "https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master.m3u8",
+        "status": 200,
+        "isHls": true,
+        "cors": "*",
+        "media": {
+          "status": 404,
+          "segments": 0
+        }
+      },
+      {
+        "url": "https://nasa-i.akamaihd.net/hls/live/253565/NASA-NTV1-HLS/master.m3u8",
+        "status": 403,
+        "isHls": false,
+        "cors": "*",
+        "media": null,
+        "head": "<HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"ht"
+      },
+      {
+        "url": "https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master_2000.m3u8",
+        "status": 404,
+        "isHls": false,
+        "cors": "*",
+        "media": null,
+        "head": ""
+      }
+    ]
+  },
+  {
+    "name": "NASA TV UHD",
+    "probes": [
+      {
+        "url": "https://ntv2.akamaized.net/hls/live/2013923/NASA-NTV2-HLS/master.m3u8",
+        "status": 200,
+        "isHls": true,
+        "cors": "*",
+        "media": {
+          "status": 404,
+          "segments": 0
+        }
+      },
+      {
+        "url": "https://endpnt.com/hls/nasa4k60/playlist.m3u8",
+        "status": 404,
+        "isHls": false,
+        "cors": "*",
+        "media": null,
+        "head": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>nginx</c"
+      }
+    ]
+  },
+  {
+    "name": "DW English",
+    "probes": [
+      {
+        "url": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8",
+        "status": 200,
+        "isHls": true,
+        "cors": "*",
+        "media": {
+          "status": 200,
+          "segments": 304
+        }
+      },
+      {
+        "url": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/master.m3u8",
+        "status": 200,
+        "isHls": true,
+        "cors": "*",
+        "media": {
+          "status": 200,
+          "segments": 304
+        }
+      }
+    ]
+  },
+  {
+    "name": "DW Español",
+    "probes": [
+      {
+        "url": "https://dwamdstream104.akamaized.net/hls/live/2015530/dwstream104/index.m3u8",
+        "status": 200,
+        "isHls": true,
+        "cors": "*",
+        "media": {
+          "status": 200,
+          "segments": 304
+        }
+      }
+    ]
+  },
+  {
+    "name": "NHK World-Japan",
+    "probes": [
+      {
+        "url": "https://master.nhkworld.jp/nhkworld-tv/playlist/live.m3u8",
+        "status": 200,
+        "isHls": true,
+        "cors": null,
+        "media": {
+          "status": 404,
+          "segments": 0
+        }
+      },
+      {
+        "url": "https://nhkwlive-ojp.akamaized.net/hls/live/2003459/nhkwlive-ojp-en/index.m3u8",
+        "error": "ENOTFOUND"
+      },
+      {
+        "url": "https://nhkwlive-xjp.akamaized.net/hls/live/2003458/nhkwlive-xjp-en/index.m3u8",
+        "error": "ENOTFOUND"
+      }
+    ]
+  },
+  {
+    "name": "France 24 English",
+    "probes": [
+      {
+        "url": "https://live.france24.com/hls/live/2037218-b/F24_EN_HI_HLS/master_5000.m3u8",
+        "status": 200,
+        "isHls": true,
+        "cors": "*",
+        "media": {
+          "status": 200,
+          "segments": 10
+        }
+      },
+      {
+        "url": "https://live.france24.com/hls/live/2037218/F24_EN_HI_HLS/master.m3u8",
+        "status": 403,
+        "isHls": false,
+        "cors": "*",
+        "media": null,
+        "head": "<HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"ht"
+      },
+      {
+        "url": "https://live.france24.com/hls/live/2037218-b/F24_EN_HI_HLS/master.m3u8",
+        "status": 403,
+        "isHls": false,
+        "cors": "*",
+        "media": null,
+        "head": "<HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"ht"
+      }
+    ]
+  },
+  {
+    "name": "Al Jazeera English",
+    "probes": [
+      {
+        "url": "https://live-hls-web-aje.getaj.net/AJE/index.m3u8",
+        "error": "ENOTFOUND"
+      },
+      {
+        "url": "https://live-hls-web-aje.getaj.net/AJE/01.m3u8",
+        "error": "ENOTFOUND"
+      }
+    ]
+  },
+  {
+    "name": "CGTN Documentary",
+    "probes": [
+      {
+        "url": "https://news.cgtn.com/resource/live/document/cgtn-doc.m3u8",
+        "error": "ENOTFOUND"
+      }
+    ]
+  },
+  {
+    "name": "TRT World",
+    "probes": [
+      {
+        "url": "https://tv-trtworld.medya.trt.com.tr/master.m3u8",
+        "status": 200,
+        "isHls": true,
+        "cors": "*",
+        "media": {
+          "status": 200,
+          "segments": 600
+        }
+      }
+    ]
+  },
+  {
+    "name": "Arirang TV",
+    "probes": [
+      {
+        "url": "https://amdlive-ch01-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8",
+        "status": 200,
+        "isHls": true,
+        "cors": "*",
+        "media": {
+          "status": 200,
+          "segments": 3
+        }
+      }
+    ]
+  },
+  {
+    "name": "Mux test stream (not for release)",
+    "probes": [
+      {
+        "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+        "status": 200,
+        "isHls": true,
+        "cors": "*",
+        "media": {
+          "status": 200,
+          "segments": 64
+        }
+      }
+    ]
+  },
+  {
+    "name": "France 24 Français",
+    "probes": [
+      {
+        "url": "https://live.france24.com/hls/live/2037179-b/F24_FR_HI_HLS/master_5000.m3u8",
+        "status": 200,
+        "isHls": true,
+        "cors": "*",
+        "media": {
+          "status": 200,
+          "segments": 10
+        }
+      }
+    ]
+  },
+  {
+    "name": "France 24 Español",
+    "probes": [
+      {
+        "url": "https://live.france24.com/hls/live/2037220-b/F24_ES_HI_HLS/master_5000.m3u8",
+        "status": 200,
+        "isHls": true,
+        "cors": "*",
+        "media": {
+          "status": 200,
+          "segments": 10
+        }
+      }
+    ]
+  },
+  {
+    "name": "DW Deutsch",
+    "probes": [
+      {
+        "url": "https://dwamdstream106.akamaized.net/hls/live/2017965/dwstream106/index.m3u8",
+        "status": 200,
+        "isHls": true,
+        "cors": "*",
+        "media": {
+          "status": 404,
+          "segments": 0
+        }
+      },
+      {
+        "url": "https://dwamdstream101.akamaized.net/hls/live/2015524/dwstream101/index.m3u8",
+        "status": 200,
+        "isHls": true,
+        "cors": "*",
+        "media": {
+          "status": 200,
+          "segments": 300
+        }
+      }
+    ]
+  },
+  {
+    "name": "NHK World-Japan (alt)",
+    "probes": [
+      {
+        "url": "https://media-tyo.hls.nhkworld.jp/hls/w/live/master.m3u8",
+        "status": 200,
+        "isHls": true,
+        "cors": null,
+        "media": {
+          "status": 200,
+          "segments": 6
+        }
+      },
+      {
+        "url": "https://masterpl.hls.nhkworld.jp/hls/w/live/master.m3u8",
+        "status": 200,
+        "isHls": true,
+        "cors": null,
+        "media": {
+          "status": 200,
+          "segments": 6
+        }
+      }
+    ]
+  },
+  {
+    "name": "Al Jazeera English (alt)",
+    "probes": [
+      {
+        "url": "https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8",
+        "status": 200,
+        "isHls": true,
+        "cors": null,
+        "media": {
+          "status": 200,
+          "segments": 6
+        }
+      },
+      {
+        "url": "https://live-hls-v3-aje.getaj.net/AJE-V3/index.m3u8",
+        "status": 404,
+        "isHls": false,
+        "cors": null,
+        "media": null,
+        "head": "Google-Edge-Cache: not found.\nError: 3"
+      }
+    ]
+  },
+  {
+    "name": "NASA+ (alt)",
+    "probes": [
+      {
+        "url": "https://nasa-f.akamaized.net/hls/live/2110572/NASA-NTV1-HLS/master.m3u8",
+        "error": "ENOTFOUND"
+      },
+      {
+        "url": "https://dc1644a9jazgj.cloudfront.net/v1/master/9d062541f2ff39b5c0f48b743c6411d25f62fc25/NASA-FAST/NASA-FAST.m3u8",
+        "status": 403,
+        "isHls": false,
+        "cors": null,
+        "media": null,
+        "head": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>AccessDenied</Code><Message>Access Denied</Message></Error>"
+      }
+    ]
+  }
+]

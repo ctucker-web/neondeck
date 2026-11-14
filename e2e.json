@@ -1,0 +1,301 @@
+[
+  {
+    "name": "startup",
+    "data": {
+      "title": "NEONDECK",
+      "platform": "win32",
+      "ui": {
+        "busy": null,
+        "toast": null,
+        "sheet": [],
+        "focus": "1LIVEDW EnglishNews"
+      },
+      "win": {
+        "focused": true,
+        "visible": true,
+        "minimized": false
+      }
+    }
+  },
+  {
+    "name": "home shelves",
+    "data": [
+      {
+        "title": "Live TV 10",
+        "cards": [
+          "DW English",
+          "Al Jazeera English",
+          "NHK World-Japan",
+          "France 24 English",
+          "TRT World",
+          "Arirang TV",
+          "DW Español",
+          "DW Deutsch",
+          "France 24 Français",
+          "France 24 Español",
+          "All Channels"
+        ]
+      },
+      {
+        "title": "Apps 04",
+        "cards": [
+          "YouTube",
+          "Pluto TV",
+          "Tubi",
+          "PBS",
+          "All Apps"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "live channel list",
+    "data": [
+      "DW English",
+      "Al Jazeera English",
+      "NHK World-Japan",
+      "France 24 English",
+      "TRT World",
+      "Arirang TV",
+      "DW Español",
+      "DW Deutsch",
+      "France 24 Français",
+      "France 24 Español"
+    ]
+  },
+  {
+    "name": "live playback per channel",
+    "data": [
+      {
+        "name": "DW English",
+        "tune": "TUNED IN 628 MS",
+        "error": null,
+        "video": {
+          "time": 1784.7,
+          "paused": false,
+          "width": 960,
+          "height": 540
+        }
+      },
+      {
+        "name": "Al Jazeera English",
+        "tune": "TUNED IN 1691 MS",
+        "error": null,
+        "video": {
+          "time": 17.51,
+          "paused": false,
+          "width": 1280,
+          "height": 720
+        }
+      },
+      {
+        "name": "NHK World-Japan",
+        "tune": "TUNED IN 970 MS",
+        "error": null,
+        "video": {
+          "time": 17.76,
+          "paused": false,
+          "width": 1280,
+          "height": 720
+        }
+      },
+      {
+        "name": "France 24 English",
+        "tune": "TUNED IN 301 MS",
+        "error": null,
+        "video": {
+          "time": 72.94,
+          "paused": false,
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      {
+        "name": "TRT World",
+        "tune": "TUNED IN 1444 MS",
+        "error": null,
+        "video": {
+          "time": 3584.8,
+          "paused": false,
+          "width": 1280,
+          "height": 720
+        }
+      },
+      {
+        "name": "Arirang TV",
+        "tune": "TUNED IN 3537 MS",
+        "error": null,
+        "video": {
+          "time": 1.88,
+          "paused": false,
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      {
+        "name": "DW Español",
+        "tune": "TUNED IN 1925 MS",
+        "error": null,
+        "video": {
+          "time": 1784.92,
+          "paused": false,
+          "width": 960,
+          "height": 540
+        }
+      },
+      {
+        "name": "DW Deutsch",
+        "tune": "TUNED IN 2933 MS",
+        "error": null,
+        "video": {
+          "time": 1784.87,
+          "paused": false,
+          "width": 960,
+          "height": 540
+        }
+      },
+      {
+        "name": "France 24 Français",
+        "tune": "TUNED IN 2117 MS",
+        "error": null,
+        "video": {
+          "time": 72.63,
+          "paused": false,
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      {
+        "name": "France 24 Español",
+        "tune": "TUNED IN 797 MS",
+        "error": null,
+        "video": {
+          "time": 72.95,
+          "paused": false,
+          "width": 1920,
+          "height": 1080
+        }
+      }
+    ]
+  },
+  {
+    "name": "fullscreen zapping",
+    "data": {
+      "fullscreen": {
+        "coversWindow": true
+      },
+      "zaps": [
+        {
+          "key": "ArrowUp",
+          "name": "Al Jazeera English",
+          "tune": "TUNED IN 1502 MS",
+          "error": null
+        },
+        {
+          "key": "ArrowUp",
+          "name": "NHK World-Japan",
+          "tune": "TUNED IN 240 MS",
+          "error": null
+        },
+        {
+          "key": "ArrowDown",
+          "name": "Al Jazeera English",
+          "tune": "TUNED IN 1461 MS",
+          "error": null
+        },
+        {
+          "key": "ArrowLeft",
+          "name": "NHK World-Japan",
+          "tune": "TUNED IN 449 MS",
+          "error": null
+        },
+        {
+          "key": "ArrowUp",
+          "name": "France 24 English",
+          "tune": "TUNED IN 300 MS",
+          "error": null
+        }
+      ]
+    }
+  },
+  {
+    "name": "guide",
+    "data": {
+      "rows": 10,
+      "focus": "No guide data · press OK to watch"
+    }
+  },
+  {
+    "name": "after pressing first app tile",
+    "data": {
+      "ui": {
+        "busy": "YouTube is open in Edge. Close it to come back here.",
+        "toast": null,
+        "sheet": [],
+        "focus": "YouTube is open in Edge. Close it to come back here.Ctrl + S"
+      },
+      "edgeProcesses": "14",
+      "win": {
+        "focused": false,
+        "visible": true,
+        "minimized": false
+      }
+    }
+  },
+  {
+    "name": "after closing the site",
+    "data": {
+      "ui": {
+        "busy": null,
+        "toast": null,
+        "sheet": [],
+        "focus": "YYouTube"
+      },
+      "edgeProcesses": "0",
+      "win": {
+        "focused": true,
+        "visible": true,
+        "minimized": false
+      }
+    }
+  },
+  {
+    "name": "spotify sheet",
+    "data": [
+      "Install",
+      "Open the website instead",
+      "Pin to Home",
+      "Hide from catalog",
+      "Close"
+    ]
+  },
+  {
+    "name": "on this pc tiles",
+    "data": 176
+  },
+  {
+    "name": "updates rows",
+    "data": 66
+  },
+  {
+    "name": "store search results",
+    "data": [
+      "VLCXPDM1ZW6815MQMMicrosoft Store",
+      "VLC UWP9NBLGGH4VVNHMicrosoft Store",
+      "VLC media playerVideoLAN.VLC3.0.24",
+      "pympressCimbali.pympress1.8.6",
+      "wcapmmozeiko.wcap2025.11.27"
+    ]
+  },
+  {
+    "name": "bridge autostart",
+    "data": {
+      "on": true,
+      "offAgain": false
+    }
+  },
+  {
+    "name": "page errors",
+    "data": []
+  }
+]
