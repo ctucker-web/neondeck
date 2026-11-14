@@ -29,6 +29,11 @@ jobs:
 
       # Real-Windows checks. Results go to the ci-logs branch for review; they
       # never block the installer from being published.
+      - name: Stream reachability check
+        continue-on-error: true
+        timeout-minutes: 5
+        run: node scripts/check-streams.cjs ci-results
+
       - name: Windows integration checks
         continue-on-error: true
         timeout-minutes: 20

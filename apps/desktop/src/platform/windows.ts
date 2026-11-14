@@ -79,7 +79,7 @@ export async function wingetSearch(query: string, source?: PackageRef['source'])
 
 export async function install(pkg: PackageRef): Promise<void> {
   if (!isValidPackageRef(pkg)) throw new Error('Invalid package reference.');
-  const { code, out } = await winget([
+  const { code, out, err } = await winget([
     'install', '--id', pkg.id, '--exact', '--source', pkg.source, '--silent', '--accept-package-agreements',
   ]);
   if (code !== 0) throw new Error(`Install failed: ${lastLines(out + err)}`);

@@ -1,0 +1,36 @@
+{
+  "_comment": "Candidate official public streams. Checked for reachability by scripts/check-streams.cjs; only working ones go into the starter pack.",
+  "candidates": [
+    { "name": "NASA TV", "group": "Science", "home": "https://plus.nasa.gov", "urls": [
+      "https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master.m3u8",
+      "https://nasa-i.akamaihd.net/hls/live/253565/NASA-NTV1-HLS/master.m3u8",
+      "https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master_2000.m3u8" ] },
+    { "name": "NASA TV UHD", "group": "Science", "home": "https://plus.nasa.gov", "urls": [
+      "https://ntv2.akamaized.net/hls/live/2013923/NASA-NTV2-HLS/master.m3u8",
+      "https://endpnt.com/hls/nasa4k60/playlist.m3u8" ] },
+    { "name": "DW English", "group": "News", "home": "https://www.dw.com/en/live-tv/channel-english", "urls": [
+      "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8",
+      "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/master.m3u8" ] },
+    { "name": "DW Español", "group": "News", "home": "https://www.dw.com/es/tv-en-vivo/channel-spanish", "urls": [
+      "https://dwamdstream104.akamaized.net/hls/live/2015530/dwstream104/index.m3u8" ] },
+    { "name": "NHK World-Japan", "group": "News", "home": "https://www3.nhk.or.jp/nhkworld/en/live/", "urls": [
+      "https://master.nhkworld.jp/nhkworld-tv/playlist/live.m3u8",
+      "https://nhkwlive-ojp.akamaized.net/hls/live/2003459/nhkwlive-ojp-en/index.m3u8",
+      "https://nhkwlive-xjp.akamaized.net/hls/live/2003458/nhkwlive-xjp-en/index.m3u8" ] },
+    { "name": "France 24 English", "group": "News", "home": "https://www.france24.com/en/live", "urls": [
+      "https://live.france24.com/hls/live/2037218-b/F24_EN_HI_HLS/master_5000.m3u8",
+      "https://live.france24.com/hls/live/2037218/F24_EN_HI_HLS/master.m3u8",
+      "https://live.france24.com/hls/live/2037218-b/F24_EN_HI_HLS/master.m3u8" ] },
+    { "name": "Al Jazeera English", "group": "News", "home": "https://www.aljazeera.com/live", "urls": [
+      "https://live-hls-web-aje.getaj.net/AJE/index.m3u8",
+      "https://live-hls-web-aje.getaj.net/AJE/01.m3u8" ] },
+    { "name": "CGTN Documentary", "group": "Documentary", "home": "https://www.cgtn.com/channel/documentary", "urls": [
+      "https://news.cgtn.com/resource/live/document/cgtn-doc.m3u8" ] },
+    { "name": "TRT World", "group": "News", "home": "https://www.trtworld.com/live", "urls": [
+      "https://tv-trtworld.medya.trt.com.tr/master.m3u8" ] },
+    { "name": "Arirang TV", "group": "World", "home": "https://www.arirang.com", "urls": [
+      "https://amdlive-ch01-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8" ] },
+    { "name": "Mux test stream (not for release)", "group": "Test", "home": "https://test-streams.mux.dev", "urls": [
+      "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8" ] }
+  ]
+}
