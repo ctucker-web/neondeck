@@ -4,14 +4,12 @@ A fullscreen, remote-friendly TV interface for a Windows 11 PC: app tiles for
 every major streaming service, an app store screen, and (in later milestones)
 live TV, DVR, library, and search. No accounts, no telemetry, no cloud.
 
-**Status: Windows preview 0.2.0.** Home screen, navigation, themes, and the
-Apps section are built. Live TV, library, search, and DVR screens are
-placeholders. The Windows-specific code has not yet been run on a real
-Windows 11 PC; see "Not yet tested" below.
+**Status: Windows preview 0.3.0.** Home, Live TV, Guide, Apps, and Settings
+work. Library, DVR, and Search are not built yet and say so on screen.
 
 ## Install on Windows 11
 
-Run `NEONDECK-Setup-0.2.0.exe`. The installer is unsigned, so Windows
+Run `NEONDECK-Setup-0.3.0.exe` from the repository's Releases page. The installer is unsigned, so Windows
 SmartScreen will show a warning: choose **More info → Run anyway**.
 
 Then, inside NEONDECK:
@@ -28,6 +26,38 @@ Then, inside NEONDECK:
 |---|---|---|---|
 | Keyboard or remote | Arrow keys | Enter | Esc or Backspace |
 | Gamepad | D-pad or left stick | A | B |
+
+## Live TV
+
+Live TV merges every enabled source into one channel list.
+
+- **Starter channels:** ten news and world channels that are the
+  broadcasters' own free public streams (DW, France 24, Al Jazeera English,
+  NHK World-Japan, TRT World, Arirang TV). NEONDECK links to them; it does not
+  host or relay them, and their terms of use have not been reviewed
+  individually. Turn the pack off under **Live TV → Sources** if you prefer.
+- **Your sources:** add an M3U playlist address or an Xtream-style account
+  under **Live TV → Sources**. An XMLTV guide address is optional; a guide
+  named in the playlist header is picked up automatically.
+- NEONDECK ships no other streams and does not bypass any protection.
+
+Watching:
+
+| Input | Action |
+|---|---|
+| OK on a channel | Tune. OK again goes fullscreen. |
+| Up / Down (fullscreen) | Next / previous channel |
+| Left (fullscreen) | Last channel |
+| Right (fullscreen) | Show or hide the channel banner |
+| 0–9 (fullscreen) | Go to a channel number |
+| ★ beside a channel | Add or remove a favorite |
+
+The time from tune to first picture is measured and shown on every channel
+change.
+
+Sources, favorites, and the last channel are saved in
+`%APPDATA%\NEONDECK\config\livetv.json`. An Xtream password is stored there
+in plain text, because the player must send it to your provider.
 
 ## App tiles
 
@@ -56,8 +86,11 @@ and managed entirely by Edge.
 ## Configuration
 
 Plain JSON files in `%APPDATA%\NEONDECK\config\`. `tiles.json` holds pins,
-hidden tiles, custom tiles, and remembered app links. Copy the folder to
-back up or move your setup.
+hidden tiles, custom tiles, and remembered app links; `livetv.json` holds
+sources and favorites. Copy the folder to back up or move your setup.
+
+If something does not work, **Settings → Diagnostics** opens the folder with
+`neondeck.log`, a plain-text record of what NEONDECK tried and what failed.
 
 ## Develop
 
@@ -104,18 +137,18 @@ The installer is written to `apps/desktop/release/`.
 | `apps/desktop` | Electron shell. `src/platform/windows.ts` is the only Windows-specific code; a Linux adapter implements the same contract later. |
 | `docs/screenshots` | Screenshots from each milestone. |
 
-## Not yet tested
+## How it is tested
 
-Verified here: unit tests, the UI in a browser against a demo platform, the
-desktop shell starting on Linux, and the installer building successfully.
+- Unit tests for the playlist, guide, and winget parsers, tile logic, and
+  navigation (`npm test`).
+- Every push builds the installer on a GitHub Windows machine and then drives
+  the packaged app there: it plays each starter channel, changes channels
+  fullscreen, opens an app tile in Edge and checks that focus returns, and
+  runs winget search, install, and uninstall. Results are saved to the
+  `ci-logs` branch.
 
-Not verified, because it needs a real Windows 11 PC:
-
-- Running the installer and the installed app.
-- winget search, install, update, and uninstall, and reading the Start menu.
-- Launching apps and Edge, and returning focus when they close.
-- Start at sign-in.
-- A physical gamepad.
+Not covered by those checks: a physical remote or gamepad, HDMI-CEC,
+Microsoft Store sign-in, and your own playlists.
 
 ## License
 

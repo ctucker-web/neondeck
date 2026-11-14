@@ -1,10 +1,65 @@
 {
   "_comment": "Starter channels: the broadcasters' own free public live streams. Each address was confirmed to answer with a working HLS stream on 2026-11-14 (scripts/check-streams.cjs). NEONDECK links to them; it does not host or relay them.",
   "channels": [
-    { "name": "DW English", "group": "News", "url": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8", "home": "https://www.dw.com/en/live-tv/channel-english" },
-    { "name": "France 24 English", "group": "News", "url": "https://live.france24.com/hls/live/2037218-b/F24_EN_HI_HLS/master_5000.m3u8", "home": "https://www.france24.com/en/live" },
-    { "name": "TRT World", "group": "News", "url": "https://tv-trtworld.medya.trt.com.tr/master.m3u8", "home": "https://www.trtworld.com/live" },
-    { "name": "Arirang TV", "group": "World", "url": "https://amdlive-ch01-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8", "home": "https://www.arirang.com" },
-    { "name": "DW Español", "group": "World", "url": "https://dwamdstream104.akamaized.net/hls/live/2015530/dwstream104/index.m3u8", "home": "https://www.dw.com/es/tv-en-vivo/channel-spanish" }
+    {
+      "name": "DW English",
+      "group": "News",
+      "url": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8",
+      "home": "https://www.dw.com/en/live-tv/channel-english"
+    },
+    {
+      "name": "Al Jazeera English",
+      "group": "News",
+      "url": "https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8",
+      "home": "https://www.aljazeera.com/live"
+    },
+    {
+      "name": "NHK World-Japan",
+      "group": "News",
+      "url": "https://media-tyo.hls.nhkworld.jp/hls/w/live/master.m3u8",
+      "home": "https://www3.nhk.or.jp/nhkworld/en/live/"
+    },
+    {
+      "name": "France 24 English",
+      "group": "News",
+      "url": "https://live.france24.com/hls/live/2037218-b/F24_EN_HI_HLS/master_5000.m3u8",
+      "home": "https://www.france24.com/en/live"
+    },
+    {
+      "name": "TRT World",
+      "group": "News",
+      "url": "https://tv-trtworld.medya.trt.com.tr/master.m3u8",
+      "home": "https://www.trtworld.com/live"
+    },
+    {
+      "name": "Arirang TV",
+      "group": "World",
+      "url": "https://amdlive-ch01-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8",
+      "home": "https://www.arirang.com"
+    },
+    {
+      "name": "DW Español",
+      "group": "World",
+      "url": "https://dwamdstream104.akamaized.net/hls/live/2015530/dwstream104/index.m3u8",
+      "home": "https://www.dw.com/es/tv-en-vivo/channel-spanish"
+    },
+    {
+      "name": "DW Deutsch",
+      "group": "World",
+      "url": "https://dwamdstream101.akamaized.net/hls/live/2015524/dwstream101/index.m3u8",
+      "home": "https://www.dw.com/de/live-tv/channel-german"
+    },
+    {
+      "name": "France 24 Français",
+      "group": "World",
+      "url": "https://live.france24.com/hls/live/2037179-b/F24_FR_HI_HLS/master_5000.m3u8",
+      "home": "https://www.france24.com/fr/direct"
+    },
+    {
+      "name": "France 24 Español",
+      "group": "World",
+      "url": "https://live.france24.com/hls/live/2037220-b/F24_ES_HI_HLS/master_5000.m3u8",
+      "home": "https://www.france24.com/es/en-vivo"
+    }
   ]
 }
