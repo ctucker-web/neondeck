@@ -46,22 +46,6 @@ jobs:
         timeout-minutes: 10
         run: node scripts/win-e2e.cjs ci-results
 
-      - name: Save check results to the ci-logs branch
-        if: always()
-        continue-on-error: true
-        shell: bash
-        run: |
-          mkdir -p ci-results && echo "$GITHUB_SHA" > ci-results/commit.txt
-          tmp="$RUNNER_TEMP/ci-results" && rm -rf "$tmp" && cp -r ci-results "$tmp"
-          git config user.name "neondeck-ci" && git config user.email "ci@users.noreply.github.com"
-          git switch --orphan ci-logs
-          git rm -rf --cached . > /dev/null 2>&1 || true
-          git clean -fdx > /dev/null 2>&1 || true
-          cp -r "$tmp"/. .
-          git add -A && git commit -q -m "CI results for $GITHUB_SHA"
-          git push -f origin ci-logs
-          git switch -f main
-
       - name: Read version
         id: version
         shell: bash
@@ -77,3 +61,19 @@ jobs:
             See the README for what has and has not been tested.
           files: apps/desktop/release/*.exe
           fail_on_unmatched_files: true
+
+      # Last, because it switches branches and cleans the working folder.
+      - name: Save check results to the ci-logs branch
+        if: always()
+        continue-on-error: true
+        shell: bash
+        run: |
+          mkdir -p ci-results && echo "$GITHUB_SHA" > ci-results/commit.txt
+          tmp="$RUNNER_TEMP/ci-results" && rm -rf "$tmp" && cp -r ci-results "$tmp"
+          git config user.name "neondeck-ci" && git config user.email "ci@users.noreply.github.com"
+          git switch --orphan ci-logs
+          git rm -rf --cached . > /dev/null 2>&1 || true
+          git clean -fdx > /dev/null 2>&1 || true
+          cp -r "$tmp"/. .
+          git add -A && git commit -q -m "CI results for $GITHUB_SHA"
+          git push -f origin ci-logs
