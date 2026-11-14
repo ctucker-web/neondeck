@@ -66,7 +66,7 @@ const killEdge = () => ps(`Get-CimInstance Win32_Process | Where-Object { $_.Nam
       zaps.push({ key, ...info });
       await page.waitForTimeout(1500);
     }
-    note('fullscreen zapping', { fullscreen: await page.evaluate(() => !!document.querySelector('.player--full')), zaps });
+    note('fullscreen zapping', { fullscreen: await page.evaluate(() => { const el = document.querySelector('.player--full'); if (!el) return false; const r = el.getBoundingClientRect(); return { coversWindow: r.left === 0 && r.top === 0 && r.width === innerWidth && r.height === innerHeight }; }), zaps });
     await page.screenshot({ path: path.join(outDir, 'e2e-06-fullscreen.png') });
     await press('Escape', 'Escape'); await page.waitForTimeout(800);
 
