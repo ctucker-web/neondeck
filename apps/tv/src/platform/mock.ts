@@ -54,6 +54,12 @@ export function createMockPlatform(): PlatformApi {
     },
     launchApp: () => wait(1600),
     launchUrl: () => wait(1600),
+    fetchText: async (url) => {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`The server answered ${res.status}.`);
+      return res.text();
+    },
+    openLogs: async () => {},
     readConfig: async (name) => {
       try {
         return JSON.parse(localStorage.getItem(KEY + name) ?? 'null');

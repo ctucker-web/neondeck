@@ -1,20 +1,22 @@
 import type { CSSProperties } from 'react';
-import type { CardShape, Item } from '../data/mock';
+import type { CardShape, Item } from '../types';
 
 interface Props {
   item: Item;
   shape: CardShape;
   autoFocus?: boolean;
   onFocus: (item: Item) => void;
+  onSelect?: (item: Item) => void;
 }
 
-export function Card({ item, shape, autoFocus, onFocus }: Props) {
+export function Card({ item, shape, autoFocus, onFocus, onSelect }: Props) {
   return (
     <button
       className={`card card--${shape}`}
       data-focusable
       data-autofocus={autoFocus ? '' : undefined}
       onFocus={() => onFocus(item)}
+      onClick={() => onSelect?.(item)}
     >
       <span className="card__glow">
       <span className="card__frame">

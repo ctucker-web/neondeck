@@ -1,8 +1,9 @@
 // On-screen keyboard for remotes and gamepads. A physical keyboard can type
 // straight into it too.
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-const ROWS = ['1234567890', 'qwertyuiop', 'asdfghjkl', 'zxcvbnm.-/'];
+const ROWS = ['1234567890', 'qwertyuiop', 'asdfghjkl:', 'zxcvbnm.-/', 'QWERTYUIOP', 'ASDFGHJKL_', 'ZXCVBNM@?='];
+const LOWER = 4;
 
 interface Props {
   value: string;
@@ -13,6 +14,8 @@ interface Props {
 }
 
 export function Osk({ value, onChange, onSubmit, submitLabel, autoFocus }: Props) {
+  const [caps, setCaps] = useState(false);
+  const rows = caps ? [ROWS[0], ...ROWS.slice(LOWER)] : ROWS.slice(0, LOWER);
   const latest = useRef({ value, onChange });
   latest.current = { value, onChange };
 
@@ -32,7 +35,7 @@ export function Osk({ value, onChange, onSubmit, submitLabel, autoFocus }: Props
 
   return (
     <div className="osk">
-      {ROWS.map((row, r) => (
+      {rows.map((row, r) => (
         <div className="osk__row" key={row}>
           {[...row].map((ch, i) => (
             <button key={ch} className="osk__key" data-focusable data-autofocus={autoFocus && r === 1 && i === 0 ? '' : undefined} onClick={() => onChange(value + ch)}>
@@ -42,6 +45,7 @@ export function Osk({ value, onChange, onSubmit, submitLabel, autoFocus }: Props
         </div>
       ))}
       <div className="osk__row">
+        <button className="osk__key osk__key--wide" data-focusable onClick={() => setCaps((c) => !c)}>{caps ? 'abc' : 'ABC @'}</button>
         <button className="osk__key osk__key--wide" data-focusable onClick={() => onChange(value + ' ')}>Space</button>
         <button className="osk__key osk__key--wide" data-focusable onClick={() => onChange(value.slice(0, -1))}>Delete</button>
         <button className="osk__key osk__key--wide" data-focusable onClick={() => onChange('')}>Clear</button>

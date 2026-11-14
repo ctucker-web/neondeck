@@ -16,6 +16,10 @@ export interface PlatformApi {
   launchApp(appId: string): Promise<void>;
   /** Opens a site in browser app mode, fullscreen. Resolves when it closes. */
   launchUrl(url: string, profile: string): Promise<void>;
+  /** Download text (playlists, guide data) without browser cross-origin limits. */
+  fetchText(url: string): Promise<string>;
+  /** Open the folder holding the diagnostics log. */
+  openLogs(): Promise<void>;
   readConfig(name: string): Promise<unknown>;
   writeConfig(name: string, data: unknown): Promise<void>;
   getAutostart(): Promise<boolean>;
@@ -25,5 +29,5 @@ export interface PlatformApi {
 
 export const PLATFORM_METHODS: (keyof PlatformApi)[] = [
   'startApps', 'wingetList', 'wingetSearch', 'install', 'uninstall', 'upgrade', 'launchApp',
-  'launchUrl', 'readConfig', 'writeConfig', 'getAutostart', 'setAutostart', 'quit',
+  'launchUrl', 'fetchText', 'openLogs', 'readConfig', 'writeConfig', 'getAutostart', 'setAutostart', 'quit',
 ];

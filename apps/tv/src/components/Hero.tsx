@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react';
-import type { Item } from '../data/mock';
+import type { Item } from '../types';
 
 export function Hero({ item }: { item: Item }) {
   return (

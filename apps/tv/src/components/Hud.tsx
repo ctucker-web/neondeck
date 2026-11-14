@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { status } from '../data/mock';
+import { useLiveTv } from '../livetv/store';
 
 function useClock() {
   const [now, setNow] = useState(() => new Date());
@@ -10,10 +10,25 @@ function useClock() {
   return now;
 }
 
+function useOnline() {
+  const [online, setOnline] = useState(() => navigator.onLine);
+  useEffect(() => {
+    const update = () => setOnline(navigator.onLine);
+    window.addEventListener('online', update);
+    window.addEventListener('offline', update);
+    return () => {
+      window.removeEventListener('online', update);
+      window.removeEventListener('offline', update);
+    };
+  }, []);
+  return online;
+}
+
+/** Status readouts. Every value here is measured, not decorative. */
 export function Hud({ section }: { section: string }) {
   const now = useClock();
-  const { network, tuners, storage, profile } = status;
-  const pct = Math.round((storage.usedTb / storage.totalTb) * 100);
+  const online = useOnline();
+  const tv = useLiveTv();
 
   return (
     <header className="hud">
@@ -25,30 +40,25 @@ export function Hud({ section }: { section: string }) {
         <div>
           <dt>Net</dt>
           <dd>
-            <i className="dot dot--ok" /> {network.label} {network.detail}
+            <i className={`dot ${online ? 'dot--ok' : 'dot--rec'}`} /> {online ? 'ONLINE' : 'OFFLINE'}
           </dd>
         </div>
         <div>
-          <dt>Tuner</dt>
-          <dd>
-            <i className="dot dot--rec" /> {tuners.inUse}/{tuners.total} {tuners.state}
-          </dd>
+          <dt>Channels</dt>
+          <dd>{tv.loading ? 'LOADING' : tv.channels.length}</dd>
         </div>
-        <div>
-          <dt>Storage</dt>
-          <dd>
-            <span className="meter" role="img" aria-label={`${pct}% used`}>
-              <span style={{ width: `${pct}%` }} />
-            </span>
-            {storage.usedTb.toFixed(1)}/{storage.totalTb.toFixed(1)} TB
-          </dd>
-        </div>
+        {tv.current && (
+          <div>
+            <dt>Tuned</dt>
+            <dd>
+              CH {tv.current.number}
+              {tv.tuneMs !== null && ` · ${tv.tuneMs} MS`}
+            </dd>
+          </div>
+        )}
         <div className="hud__clock">
           <dt>{now.toLocaleDateString([], { weekday: 'short', month: 'short', day: 'numeric' })}</dt>
           <dd>{now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</dd>
-        </div>
-        <div className="hud__profile" aria-label={`Profile ${profile}`}>
-          {profile}
         </div>
       </dl>
     </header>

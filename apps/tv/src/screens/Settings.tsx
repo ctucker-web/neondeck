@@ -76,6 +76,12 @@ export function SettingsScreen({ settings, update }: Props) {
       action: installJellyfin,
     },
     {
+      label: 'Diagnostics',
+      value: 'Open log folder',
+      hint: 'A plain-text log of what NEONDECK tried and what failed.',
+      action: () => void platform.openLogs(),
+    },
+    {
       label: 'Exit',
       value: 'To desktop',
       hint: 'Closes NEONDECK and returns to Windows.',
@@ -99,13 +105,13 @@ export function SettingsScreen({ settings, update }: Props) {
             </li>
           ))}
         </ul>
-        <p className="settings__note">Press OK to change a setting. F11 toggles fullscreen. Sources, profiles, and parental controls arrive in later milestones.</p>
+        <p className="settings__note">Press OK to change a setting. F11 toggles fullscreen. Channel sources are managed in Live TV.</p>
       </div>
       <aside className="panel panel--side">
         <p className="panel__kicker">About</p>
         <dl className="about">
           <dt>Version</dt>
-          <dd>0.2.0 · Windows preview</dd>
+          <dd>0.3.0 · Windows preview</dd>
           <dt>License</dt>
           <dd>Not chosen yet</dd>
           <dt>Sign-ins</dt>
